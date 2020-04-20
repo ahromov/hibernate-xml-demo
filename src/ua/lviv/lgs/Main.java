@@ -49,7 +49,6 @@ public class Main {
 
 		session.save(cardOne);
 		session.save(cardTwo);
-
 		session.getTransaction().commit();
 
 		NativeQuery<Card> query = session.createSQLQuery("SELECT * FROM cards");
@@ -57,9 +56,7 @@ public class Main {
 		query.getResultList().forEach(System.out::println);
 
 		session.beginTransaction();
-
 		session.remove(cardOne);
-
 		session.getTransaction().commit();
 
 		query.getResultList().forEach(System.out::println);
