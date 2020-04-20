@@ -8,6 +8,9 @@ import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.query.NativeQuery;
 
+import ua.lviv.lgs.entity.Card;
+import ua.lviv.lgs.entity.Item;
+
 /**
  * A program that demonstrates using Hibernate framework to manage a
  * bidirectional many-to-many association in relational database.

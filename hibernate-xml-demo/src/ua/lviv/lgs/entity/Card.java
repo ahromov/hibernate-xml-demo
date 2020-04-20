@@ -1,23 +1,23 @@
-package ua.lviv.lgs;
+package ua.lviv.lgs.entity;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class Item {
+public class Card {
 
 	private long id;
 	private String name;
 	private Long count;
 
-	private Set<Card> cards = new HashSet<Card>();
+	private Set<Item> items = new HashSet<Item>();
 
-	public Item(String name, Long count) {
+	public Card(String name, Long count) {
 		this.name = name;
 		this.count = count;
 	}
 
-	public void addCard(Card card) {
-		this.cards.add(card);
+	public void addItem(Item item) {
+		this.items.add(item);
 	}
 
 	public long getId() {
@@ -32,8 +32,8 @@ public class Item {
 		return name;
 	}
 
-	public void setName(String username) {
-		this.name = username;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public Long getCount() {
@@ -44,17 +44,17 @@ public class Item {
 		this.count = count;
 	}
 
-	public Set<Card> getCards() {
-		return cards;
+	public Set<Item> getItems() {
+		return items;
 	}
 
-	public void setCards(Set<Card> cards) {
-		this.cards = cards;
+	public void setItems(Set<Item> items) {
+		this.items = items;
 	}
 
 	@Override
 	public String toString() {
-		return "Item [id=" + id + ", name=" + name + ", count=" + count + "]";
+		return "Card [id=" + id + ", name=" + name + ", count=" + count + ", items=" + items + "]";
 	}
 
 }
